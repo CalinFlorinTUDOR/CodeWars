@@ -16,3 +16,14 @@ function mergeArrays(arr1, arr2) {
   
   return [...new Set(mergedArray)]
 }
+
+// 2nd solution
+
+function mergeArrays(arr1, arr2) {
+
+  let arr3= arr1.concat(arr2).sort((a,b) => a - b) 
+  
+  const a = new Set (arr3)
+
+  return Array.from(a)
+}
